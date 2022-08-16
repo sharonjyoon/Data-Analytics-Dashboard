@@ -10,9 +10,9 @@ import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css';
 
-const App = () => {
-  const { setCurrentColor, setCurrentMode, currentMode,activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-  // const activeMenu = true;
+const App = () => { 
+  let { setCurrentColor, setCurrentMode, currentMode,activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  activeMenu = true;
   return (
     <div>
       <BrowserRouter>
