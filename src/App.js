@@ -11,8 +11,8 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => { 
-  let { setCurrentColor, setCurrentMode, currentMode,activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-  activeMenu = true;
+  const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
+  // activeMenu = true;
   return (
     <div>
       <BrowserRouter>
@@ -41,8 +41,6 @@ const App = () => {
           <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
             <Navbar />
           </div>
-         </div>
-
          <div>
           <Routes>
             {/* Dashboard */}
@@ -71,7 +69,7 @@ const App = () => {
             <Route path="/stacked" element={<Stacked />} />
           </Routes>
          </div>
-
+        </div>
         </div>
       </BrowserRouter>
     </div>
