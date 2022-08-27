@@ -13,6 +13,7 @@ const Stacked = ({width, height}) => {
     primaryYAxis={stackedPrimaryYAxis}
     chartArea={{ border: { width: 0 }}}
     tooltip={{ enable: true }}
+    background={currentMode === 'Dark' ? '#33373E' : '#fff'}
     LegendSettings={{ background: 'white'}}
     >
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]}/>
@@ -20,7 +21,7 @@ const Stacked = ({width, height}) => {
         {stackedCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
       </SeriesCollectionDirective>
     </ChartComponent>
-  )
-}
+  );
+};
 
-export default Stacked
+export default Stacked;
